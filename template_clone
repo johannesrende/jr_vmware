@@ -1,0 +1,18 @@
+---
+hosts: all
+tasks:
+
+    - name: Create a virtual machine from a template
+      community.vmware.vmware_guest:
+        hostname: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        folder: /SystemhausBonn/
+        name:
+        state: 
+        template: 
+        datacenter:
+        datastore:
+
+
+        networks:
