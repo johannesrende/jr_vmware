@@ -1,0 +1,15 @@
+---
+# vars file for lab_snapshot
+vms:
+  - jumphost-tk
+  - ansible011
+  - student111
+  - student112
+  - student113
+  - student114
+  - student115
+  - student116
+  - student117
+  - student118
+  - student119
+  - student120
