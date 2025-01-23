@@ -1,5 +1,5 @@
 ---
-# vars file for lab_snapshot
+datacenter_name: "Erlebnisforum"
 vms:
   - jumphost-tk
   - ansible011

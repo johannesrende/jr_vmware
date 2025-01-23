@@ -1,4 +1,4 @@
 ---
 snap_description: "Snapshot created on {{ ansible_date_time.iso8601 }}"
 snapshot_name: "snap_{{ ansible_date_time.date }}"
-datacenter_name: "Erlebnisforum"
+

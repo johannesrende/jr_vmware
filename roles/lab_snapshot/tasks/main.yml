@@ -1,14 +1,27 @@
 ---
 - name: Create a snapshot
   community.vmware.vmware_guest_snapshot:
-    hostname: "{{ vcenter_hostname }}"
-    username: "{{ vcenter_username }}"
-    password: "{{ vcenter_password }}"
+    hostname: "{{ host }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
     datacenter: "{{ datacenter_name }}"
-    folder: "/{{ datacenter_name }}/vm/"
-    name: "{{ item }}"
+    folder: "/{{ datacenter_name }}/"
+    name: jumphost-tk
     state: present
     snapshot_name: "{{ snapshot_name }}"
     description: "{{ snap_description }}"
-  loop: "{{ vms }}"
   delegate_to: localhost
+
+# - name: Create a snapshot
+#   community.vmware.vmware_guest_snapshot:
+#     hostname: "{{ host }}"
+#     username: "{{ username }}"
+#     password: "{{ password }}"
+#     datacenter: "{{ datacenter_name }}"
+#     folder: "/{{ datacenter_name }}/"
+#     name: "{{ item }}"
+#     state: present
+#     snapshot_name: "{{ snapshot_name }}"
+#     description: "{{ snap_description }}"
+#   loop: "{{ vms }}"
+#   delegate_to: localhost
